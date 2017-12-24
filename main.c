@@ -1,9 +1,7 @@
-#include "utils/logger.h"
+#include "crypto/initialize_libsodium.h"
 
 int main() {
-    log_debug("debug message");
-    log_info("info message");
-    log_warning("warning message");
-    log_error("error message");
+    initialize_libsodium();
+
     return 0;
 }
