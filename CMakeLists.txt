@@ -20,7 +20,8 @@ ELSE (LIBSODIUM_FOUND)
     MESSAGE(FATAL_ERROR "Could not find libsodium")
 ENDIF (LIBSODIUM_FOUND)
 
-add_executable(libsodium_file_crypter
+add_executable(
+        libsodium_file_crypter
         main.c
         utils/logger.c utils/logger.h
         crypto/initialize_libsodium.c crypto/initialize_libsodium.h)
