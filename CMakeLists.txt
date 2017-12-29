@@ -23,8 +23,10 @@ ENDIF (LIBSODIUM_FOUND)
 add_executable(
         libsodium-file-crypter
         main.c
+        crypto/decrypt_file.c crypto/decrypt_file.h
+        crypto/encrypt_file.c crypto/encrypt_file.h
         crypto/initialize_libsodium.c crypto/initialize_libsodium.h
         utils/logger.c utils/logger.h
-)
+        utils/file_utils.c utils/file_utils.h)
 
 target_link_libraries(libsodium-file-crypter ${LIBSODIUM_LIBRARY})
