@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.9)
-project(libsodium_file_crypter C)
+project(libsodium-file-crypter C)
 
 set(CMAKE_C_STANDARD 11)
 
@@ -21,10 +21,11 @@ ELSE (LIBSODIUM_FOUND)
 ENDIF (LIBSODIUM_FOUND)
 
 add_executable(
-        libsodium_file_crypter
+        libsodium-file-crypter
         main.c
         crypto/initialize_libsodium.c crypto/initialize_libsodium.h
         utils/argument_parser.c utils/argument_parser.h
-        utils/logger.c utils/logger.h)
+        utils/logger.c utils/logger.h
+)
 
-target_link_libraries(libsodium_file_crypter ${LIBSODIUM_LIBRARY})
+target_link_libraries(libsodium-file-crypter ${LIBSODIUM_LIBRARY})
