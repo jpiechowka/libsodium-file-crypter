@@ -24,7 +24,6 @@ add_executable(
         libsodium-file-crypter
         main.c
         crypto/initialize_libsodium.c crypto/initialize_libsodium.h
-        utils/argument_parser.c utils/argument_parser.h
         utils/logger.c utils/logger.h
 )
 
