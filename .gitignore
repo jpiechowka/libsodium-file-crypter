@@ -1,5 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
 
+### Project Related
+/libsodium-file-crypter*
+
 ### C template
 # Prerequisites
 
