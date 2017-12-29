@@ -1,5 +1,5 @@
 # libsodium-file-crypter
-A file encryption utinstructionsn C using libsodium
+A file encryption utility written in C using libsodium
 
 ## Requirements
 #### 1. Libsodium
