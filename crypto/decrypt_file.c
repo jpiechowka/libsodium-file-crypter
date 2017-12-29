@@ -1,8 +1,12 @@
 #include <stdio.h>
 #include "decrypt_file.h"
+#include "initialize_libsodium.h"
 
 int decrypt_file(const char *fileToDecrypt, const char *outputFile,
                  const unsigned char key[crypto_secretstream_xchacha20poly1305_KEYBYTES]) {
+
+    //Try to initialize libsodium before doing anything else. If this fails the program will exit.
+    initialize_libsodium();
 
     unsigned char buf_in[CHUNK_SIZE + crypto_secretstream_xchacha20poly1305_ABYTES];
     unsigned char buf_out[CHUNK_SIZE];

@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include "encrypt_file.h"
-
-#define CHUNK_SIZE 4096
+#include "initialize_libsodium.h"
 
 int encrypt_file(const char *fileToEncrypt, const char *outputFile,
                  const unsigned char key[crypto_secretstream_xchacha20poly1305_KEYBYTES]) {
+
+    //Try to initialize libsodium before doing anything else. If this fails the program will exit.
+    initialize_libsodium();
 
     unsigned char buf_in[CHUNK_SIZE];
     unsigned char buf_out[CHUNK_SIZE + crypto_secretstream_xchacha20poly1305_ABYTES];
