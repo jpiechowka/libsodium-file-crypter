@@ -3,10 +3,10 @@
 
 #include <stdbool.h>
 
-bool check_if_file_exists(char *filePath);
+bool check_if_file_exists(const char *filePath);
 
-bool check_if_file_is_readable(char *filePath);
+bool check_if_file_is_readable(const char *filePath);
 
-bool check_if_file_is_writable(char *filePath);
+bool check_if_file_is_writable(const char *filePath);
 
 #endif //LIBSODIUM_FILE_CRYPTER_FILE_UTILS_H
