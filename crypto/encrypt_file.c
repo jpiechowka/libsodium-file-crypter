@@ -31,7 +31,10 @@ int encrypt_file(const char *fileToEncrypt, const char *outputFile, const char *
 
     //Check if file to encrypt exists and is readable
     if (!(check_if_file_exists(fileToEncrypt) && check_if_file_is_readable(fileToEncrypt))) {
+        log_error_concat_str(fileToEncrypt, " file does not exists");
         return 1;
+    } else {
+        log_debug_concat_str(fileToEncrypt, " file exists and is readable");
     }
 
     // Encrypting file

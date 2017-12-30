@@ -31,7 +31,10 @@ int decrypt_file(const char *fileToDecrypt, const char *outputFile, const char *
 
     //Check if file to decrypt exists and is readable
     if (!(check_if_file_exists(fileToDecrypt) && check_if_file_is_readable(fileToDecrypt))) {
+        log_error_concat_str(fileToDecrypt, " file does not exists");
         return 1;
+    } else {
+        log_debug_concat_str(fileToDecrypt, " file exists and is readable");
     }
 
     // Decrypting file
