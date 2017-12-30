@@ -10,6 +10,7 @@ struct LoggerOptions {
 struct LoggerOptions loggerOptions = {.showDebugMessages = false};
 
 void toggle_debug_logging(bool shouldDebugLoggingBeEnabled) {
+    log_info("Enabling DEBUG logging");
     loggerOptions.showDebugMessages = shouldDebugLoggingBeEnabled;
 };
 
