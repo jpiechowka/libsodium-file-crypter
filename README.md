@@ -92,7 +92,7 @@ Usage: libsodium-file-crypter [-defv?V] [-o FILE] [--decrypt] [--encrypt]
         * **plaintext.txt** is the file to encrypt
         * **super-secret-pass-123** is the password provided
 
-    [![asciicast](https://asciinema.org/a/154917.png)](https://asciinema.org/a/154917)
+[![asciicast](https://asciinema.org/a/154917.png)](https://asciinema.org/a/154917)
 
 2. Decrypting previously encrypted file
     * ```./libsodium-file-crypter -v -d -f -o plaintext.txt encrypted.txt super-secret-pass-123```
@@ -103,7 +103,7 @@ Usage: libsodium-file-crypter [-defv?V] [-o FILE] [--decrypt] [--encrypt]
         * **encrypted.txt** is the file to decrypt
         * **super-secret-pass-123** is the password provided
 
-    [![asciicast](https://asciinema.org/a/154918.png)](https://asciinema.org/a/154918)
+[![asciicast](https://asciinema.org/a/154918.png)](https://asciinema.org/a/154918)
 
 ## TODO
 
