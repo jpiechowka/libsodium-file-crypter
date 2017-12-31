@@ -57,6 +57,7 @@ int decrypt_file(const char *fileToDecrypt, const char *outputFile, const char *
     openOutputFile = fopen(outputFile, "wb");
     fread(header, 1, sizeof header, openFileToDecrypt);
     if (crypto_secretstream_xchacha20poly1305_init_pull(&st, header, generatedCryptoKey) != 0) {
+        log_error("Incomplete header");
         goto ret; /* incomplete header */
     }
     do {
