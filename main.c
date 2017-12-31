@@ -16,7 +16,7 @@ const char *argp_program_bug_address = "https://github.com/jpiechowka/libsodium-
 unsigned char crypto_key[crypto_secretstream_xchacha20poly1305_KEYBYTES];
 
 // Program documentation
-static char doc[] = "A file encryption utility written in C using libsodium";
+static char doc[] = "Linux file encryption utility written in C using libsodium";
 
 // A description of the arguments we accept
 static char args_doc[] = "FILE PASSWORD";
