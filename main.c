@@ -62,16 +62,20 @@ static error_t parse_opt(int key, char *arg, struct argp_state *state) {
             arguments->operationMode = 1;
             break;
         case ARGP_KEY_ARG: {
-            if (state->arg_num >= 2)
+            if (state->arg_num >= 2) {
                 /* Too many arguments. */
+                log_error("Too many arguments provided");
                 argp_usage(state);
+            }
             arguments->args[state->arg_num] = arg;
             break;
         }
         case ARGP_KEY_END: {
-            if (state->arg_num < 2)
+            if (state->arg_num < 2) {
                 /* Not enough arguments. */
+                log_error("Not enough arguments provided");
                 argp_usage(state);
+            }
             break;
         }
         default:
