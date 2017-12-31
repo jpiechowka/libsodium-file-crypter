@@ -4,7 +4,19 @@ Linux file encryption utility written in C using libsodium
 * Current version ```libsodium-file-crypter version 1.0.0```
 
 ## Requirements
-#### 1. Libsodium
+
+#### 1. Linux operating system
+
+**For now only Linux is supported**
+
+This program has been compiled and tested on Fedora 27
+
+```
+[root@localhost d3v]# uname -a
+Linux localhost.localdomain 4.14.8-300.fc27.x86_64 #1 SMP Wed Dec 20 19:00:18 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
+```
+
+#### 2. Libsodium
 [Libsodium installation instructions from the official docs](https://download.libsodium.org/doc/installation/)
 
 1. Download source (latest stable preferred) tarball from [HERE](https://download.libsodium.org/libsodium/releases/)
@@ -17,7 +29,7 @@ Linux file encryption utility written in C using libsodium
 
 Libraries will be installed in ```/usr/local/lib```
 
-#### 2. CMake
+#### 3. CMake
 
 Refer to official docs for installation [HERE](https://cmake.org/install/)
 
