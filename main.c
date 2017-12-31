@@ -133,7 +133,11 @@ int main(int argc, char *argv[]) {
             return 1;
         }
 
-        encrypt_file(arguments.args[0], arguments.outputFile, arguments.args[1]);
+        if (encrypt_file(arguments.args[0], arguments.outputFile, arguments.args[1]) != 0) {
+            log_error_concat_str("There was an error while performing encryption of the file: ", arguments.args[0]);
+            return 1;
+        }
+
     } else if (arguments.operationMode == 2) {
         /* Decryption */
         /* Check if file to decrypt is not the same as output file*/
@@ -143,7 +147,10 @@ int main(int argc, char *argv[]) {
             return 1;
         }
 
-        decrypt_file(arguments.args[0], arguments.outputFile, arguments.args[1]);
+        if (decrypt_file(arguments.args[0], arguments.outputFile, arguments.args[1]) != 0) {
+            log_error_concat_str("There was an error while performing decryption of the file: ", arguments.args[0]);
+            return 1;
+        };
     }
 
     return 0;
