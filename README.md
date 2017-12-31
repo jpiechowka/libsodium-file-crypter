@@ -63,7 +63,7 @@ To see help message run with ```-?``` or ```--help``` options
 
 ```
 Usage: libsodium-file-crypter [OPTION...] FILE PASSWORD
-A file encryption utility written in C using libsodium
+Linux file encryption utility written in C using libsodium
 
   -d, --decrypt              Decrypt the specified file. Specifying operation
                              mode is mandatory for program to run
