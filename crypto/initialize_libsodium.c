@@ -1,5 +1,5 @@
-#include "../utils/logger.h"
 #include <sodium.h>
+#include "../utils/logger.h"
 
 void initialize_libsodium() {
     log_debug("Trying to initialize libsodium library, calling sodium_init() function");
