@@ -3,6 +3,10 @@ Linux file encryption utility written in C using libsodium
 
 * Current version ```libsodium-file-crypter version 1.0.0```
 
+## IDE
+
+This project was created using [CLion](https://www.jetbrains.com/clion/)
+
 ## Requirements
 
 #### 1. Linux operating system
@@ -27,7 +31,9 @@ Linux localhost.localdomain 4.14.8-300.fc27.x86_64 #1 SMP Wed Dec 20 19:00:18 UT
 6. ```sudo make install``` or execute ```make install``` after switching with ```su``` to root
 7. You may want to run ```ldconfig``` that creates the necessary links and cache to the most recent shared libraries
 
-Libraries will be installed in ```/usr/local/lib```
+On Fedora 27
+* Libraries will be installed in ```/usr/local/lib/```
+* Header files will be located in ```/usr/local/include/```
 
 #### 3. CMake
 
