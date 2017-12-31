@@ -1,6 +1,5 @@
 #include <unistd.h>
 #include "file_utils.h"
-#include "logger.h"
 
 bool check_if_file_exists(const char *filePath) {
     if (access(filePath, F_OK) != -1) {
