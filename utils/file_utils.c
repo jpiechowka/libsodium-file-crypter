@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include <memory.h>
 #include "file_utils.h"
 
 bool check_if_file_exists(const char *filePath) {
@@ -31,4 +32,12 @@ bool check_if_file_is_writable(const char *filePath) {
     }
 }
 
-
+bool are_two_file_paths_the_same(const char *filePath1, const char *filePath2) {
+    if (strcmp(filePath1, filePath2) == 0) {
+        // Paths are the same
+        return true;
+    } else {
+        // Paths are not the same
+        return false;
+    }
+}
