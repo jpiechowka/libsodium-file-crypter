@@ -15,7 +15,6 @@ int decrypt_file(const char *fileToDecrypt, const char *outputFile, const char *
 
     //TODO figure out a better way to generate and store salt instead of all zeros
     log_debug("Generating salt");
-    log_warning("TODO: figure out a better way to generate and store salt instead of all zeros");
     sodium_memzero(salt, sizeof(salt));
 
     log_debug_concat_str("Generating cryptographic key from password: ", password);
