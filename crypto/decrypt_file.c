@@ -77,9 +77,6 @@ int decrypt_file(const char *fileToDecrypt, const char *outputFile, const char *
 
     ret = 0;
     ret:
-    {
-
-    };
     log_debug("Closing open output file");
     fclose(openOutputFile);
     log_debug("Closing open file to decrypt");
